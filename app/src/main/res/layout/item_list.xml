@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin8"
+        android:layout_marginLeft="@dimen/margin8"
+        android:layout_marginTop="@dimen/margin4"
+        android:layout_marginRight="@dimen/margin8"
+        android:clipToPadding="false"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_homework_add"
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/iv_roundHw_add"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/avatar_2_raster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_teacher_add" />
+
+            <TextView
+                android:id="@+id/tv_teacher_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_by"
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/margin16"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_imageHw2_add"
+                app:layout_constraintStart_toEndOf="@+id/profile_imageHw2_add" />
+
+            <TextView
+                android:id="@+id/tvHomeworkHw_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16"
+                android:layout_marginEnd="@dimen/margin16"
+                android:lines="5"
+                android:scaleType="fitCenter"
+                android:text="@string/message"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_roundHw_add"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_roundHw_add" />
+
+            <TextView
+                android:id="@+id/tvLessonHw_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/comunity"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_teacher_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_teacher_add" />
+
+            <TextView
+                android:id="@+id/tvUpvote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/show"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_eye_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvComments"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/comment"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_edit_note_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvAwards"
+                app:layout_constraintStart_toEndOf="@+id/tvUpvote" />
+
+            <TextView
+                android:id="@+id/tvAwards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/awards"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_star_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvComments" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageHw2_add"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="@dimen/margin16"
+                android:src="@drawable/avatar_1_raster"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

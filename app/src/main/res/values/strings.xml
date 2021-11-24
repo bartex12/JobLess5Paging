@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RadditLess5</string>
+    <string name="no_data">Нет данных. Проверьте наличие интернета</string>
+    <string name="auther">Федя</string>
+    <string name="send_by">Послано Васей 5 дней назад</string>
+    <string name="comunity">спорт</string>
+    <string name="message">Сообщение от пользователя</string>
+    <string name="show">Просмотры</string>
+    <string name="comment">Коментарии</string>
+    <string name="awards">Награды</string>
+</resources>
