@@ -5,9 +5,9 @@ import androidx.paging.PositionalDataSource
 import com.bartex.radditless5.entity.Children
 import com.bartex.radditless5.ui.fragment.RedditViewModel
 
-class MyPositionalDataSource(val viewModel: RedditViewModel) : PositionalDataSource<Children>() {
+class MyPositionalDataSource(private val viewModel: RedditViewModel) : PositionalDataSource<Children>() {
     companion object{
-        const val  TAG = "33333"
+        const val  TAG = "RedditLess5"
     }
     override fun loadInitial(params: LoadInitialParams, callback: LoadInitialCallback<Children>) {
         Log.d(TAG," MyPositionalDataSource loadInitial  " +

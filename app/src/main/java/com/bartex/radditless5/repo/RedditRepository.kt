@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch
 
 class RedditRepository: IRedditRepository {
     companion object{
-        const val TAG = "33333"
+        const val TAG = "RedditLess5"
     }
     override fun loadData(pageNumber: Int, pageSize: Int): List<Children>? {
        var redditList : List<Children>? = listOf()
