@@ -11,8 +11,8 @@ interface IReddit {
     @GET("r/aww/hot.json")
     fun loadRedditData(): Call<ResultFromNet>
 
-//    @GET("r/cats/search.json")
-//    fun loadRedditData(
-//        @Query("q")text: String = "cat"
-//    ): Call<ResultFromNet>
+    @GET("r/cats/search.json")
+    fun loadRedditData(
+        @Query("q")text: String = "cat"
+    ): Call<ResultFromNet>
 }

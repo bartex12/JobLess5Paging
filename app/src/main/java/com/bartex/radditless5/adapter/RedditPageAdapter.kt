@@ -3,21 +3,17 @@ package com.bartex.radditless5
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.paging.PagedListAdapter
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bartex.radditless5.entity.Children
-import com.squareup.picasso.Picasso
 
 class RedditPageAdapter
     : PagedListAdapter<Children, RedditViewHolder>(POST_COMPARATOR) {
 
         companion object{
-            val POST_COMPARATOR = object : DiffUtil.ItemCallback<Children>() {
-
+               val POST_COMPARATOR = object : DiffUtil.ItemCallback<Children>() {
                 override fun areContentsTheSame(oldItem: Children, newItem: Children): Boolean =
                     oldItem == newItem
 
@@ -33,7 +29,6 @@ class RedditPageAdapter
 
         override fun onBindViewHolder(holder: RedditViewHolder, position: Int) {
             val repoItem = getItem(position)
-            // Note that item may be null, ViewHolder must support binding null item as placeholder
             holder.bind(repoItem)
         }
     }
@@ -45,7 +40,6 @@ class RedditPageAdapter
         private val tvUpvote = view.findViewById<TextView>(R.id.tvUpvote)
         private val tvComments = view.findViewById<TextView>(R.id.tvComments)
         private val tvAwards = view.findViewById<TextView>(R.id.tvAwards)
-        private val ivThumbnail = view.findViewById<ImageView>(R.id.iv_roundHw_add)
 
         fun bind(children: Children?) {
             if (children != null) {
@@ -56,14 +50,5 @@ class RedditPageAdapter
                 tvComments.text = children.data?.num_comments.toString()
                 tvAwards.text = children.data?.total_awards_received.toString()
             }
-            var url = ""
-            children?.data?.thumbnail?.let {
-                url = it
-            }
-            Picasso.get()
-                .load(url)
-                .placeholder(R.drawable.post)
-                .error(R.drawable.whatcanido)
-                .into(ivThumbnail)
         }
     }

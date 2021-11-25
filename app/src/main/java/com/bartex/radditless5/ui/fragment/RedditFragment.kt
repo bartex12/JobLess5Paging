@@ -18,10 +18,9 @@ import com.bartex.radditless5.entity.Children
 import java.util.concurrent.Executors
 
 class RedditFragment : Fragment() {
-
     private lateinit var rvReddit:RecyclerView
     private lateinit var pageAdapter: RedditPageAdapter
-    val viewModel by lazy{
+    private val viewModel by lazy{
         ViewModelProvider(this)[RedditViewModel::class.java]
     }
     private lateinit var pagedListLiveData : LiveData<PagedList<Children>>
